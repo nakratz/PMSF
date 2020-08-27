@@ -144,6 +144,9 @@ $numberOfPokemon = 649;
 $numberOfItem = 1600;
 $numberOfGrunt = 50;
 $numberOfEgg = 10;
+
+/* UserTimezone */
+$userTimezone = date_default_timezone_get();
 //-----------------------------------------------------
 // Login  - You need to create the two tables referenced in sql.sql
 //-----------------------------------------------------
@@ -461,6 +464,9 @@ $noEditCommunity = true;
 // Nests
 //-----------------------------------------------------
 $noNests = true;                                                   // true/false
+$noNestsAvg = true;                                                   // true/false
+$nestAvgMax = 50;
+$nestAvgDefault = 5;
 $enableNests = 'false';                                             // true/false
 $hideNestCoords = false;
 $noManualNests = true;

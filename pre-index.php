@@ -448,7 +448,13 @@ if (!$noLoadingScreen) {
                                 <span class="switch-handle"></span>
                             </label>
                         </div>
-                    </div>';
+		    </div>';
+                    }
+                    if (! $noNestsAvg && ! $noNests) {
+                        echo '<div class="nestslider-div">
+                                <input type="range" min="0" max="' . $nestAvgMax . '" value="' . $nestAvgDefault . '" class="nestslider" id="nestrange">
+                                <p>' . i8ln('Show nest average. ') . '<span id="nestavg"></span></p>
+                        </div>';
                     } ?>
                 </div>
                     <div id="pokemon-filter-wrapper" style="display:none">
@@ -1380,7 +1386,7 @@ if (!$noLoadingScreen) {
             ?>
 
             <?php
-            if (! $noMapStyle || ! $noDirectionProvider || ! $noIconSize || ! $noIconNotifySizeModifier || ! $noGymStyle || ! $noLocationStyle) {
+            if (! $noDarkMode || ! $noMapStyle || ! $noDirectionProvider || ! $noIconSize || ! $noIconNotifySizeModifier || ! $noGymStyle || ! $noLocationStyle) {
                 echo '<h3>' . i8ln('Style') . '</h3>
             <div>';
             }
@@ -1485,7 +1491,7 @@ if (!$noLoadingScreen) {
             }
             ?>
             <?php
-            if (! $noMapStyle || ! $noDirectionProvider || ! $noIconSize || ! $noIconNotifySizeModifier || ! $noGymStyle || ! $noLocationStyle) {
+            if (! $noDarkMode || ! $noMapStyle || ! $noDirectionProvider || ! $noIconSize || ! $noIconNotifySizeModifier || ! $noGymStyle || ! $noLocationStyle) {
                 echo '</div>';
             }
             ?>
@@ -2308,6 +2314,7 @@ if (!$noLoadingScreen) {
     var makeItBang = <?php echo $makeItBang === true ? 'true' : 'false' ?>;
     var showYourLove = <?php echo $showYourLove === true ? 'true' : 'false' ?>;
     var defaultDustAmount = <?php echo $defaultDustAmount; ?>;
+    var nestAvgDefault = <?php echo $nestAvgDefault; ?>;
     var noDarkMode = <?php echo $noDarkMode === true ? 'true' : 'false' ?>;
     var noCatchRates = <?php echo $noCatchRates === true ? 'true' : 'false' ?>;
 </script>

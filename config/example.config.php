@@ -125,6 +125,8 @@ $faviconPath = '';                                                  // Upload fa
 /* IMGBB API */
 $imgurCID = "";
 
+/* UserTimezone */
+#$userTimezone = "Etc/UTC";			                    // If different from server settings set php frontend timezone https://www.php.net/manual/en/timezones.php
 //-----------------------------------------------------
 // Login
 //-----------------------------------------------------
@@ -472,6 +474,9 @@ $noEditCommunity = true;
 // Nests
 //-----------------------------------------------------
 $noNests = true;
+$noNestsAvg = true;                                                   // true/false
+$nestAvgMax = 50;						      // Nest Average filter maximum
+$nestAvgDefault = 5;                                                  // Nest Average filter default
 $enableNests = 'false';
 $hideNestCoords = false;
 $noManualNests = true;
